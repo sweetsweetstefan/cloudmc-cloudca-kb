@@ -29,6 +29,7 @@ Roles have a scope, which can be any of the following:
 
 ## Explanation of the system roles
 ![permissions chart](permissions.png)
+
 Summary of each role:
 - Guest: A read-only role.  Can view resources in scoped organizations.
 - User: Can create and environments in scoped environments.
@@ -50,3 +51,4 @@ Primary role must be one of the five standard roles, it can never be a custom ro
 - Administrator of one organization, read-only for another organization
 - Network administrator, no instances
 - Administrator of customers, tag the customer orgs so that admins with that role automatically get correct permissions
+- Billing administrator
