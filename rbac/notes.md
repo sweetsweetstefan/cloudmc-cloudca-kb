@@ -20,3 +20,5 @@ Is there a use-case for a guest account in System with an additional role of Ope
 
 
 Look at the permissions and see what you can't shuffle together in terms of ideas for roles.  For example, billing admin.  Could there be a network only admin easily possible?
+
+Why is it  that for the stef-test accout, which has a primary role of guest in the System org, can't create accounts even though the name of the permission is Environments: Create and scoped to the Aptum org.  How come the guest account needs the Environments:Own All permission is necessary for getting this to work,

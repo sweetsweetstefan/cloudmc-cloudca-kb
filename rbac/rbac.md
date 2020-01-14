@@ -35,7 +35,7 @@ Summary of each role:
 - User: Can create and environments in scoped environments.
 - Administrator: Can manage scoped organizations.  Cannot view sub-organizations nor create new organizations. Can create environments, users, roles, and access usage data in scoped organizations.
 - Reseller: Can manage branding and pricing in scoped organizations and sub-organizations.
-- Operator: Can create organizations, manage service connections, quotas, commitments, and full access to all other system resources.
+- Operator: Can create organizations, manage service connections, quotas, commitments, and full access to all other organizations and system resources.
 
 Each system role has a default scope:
 - Guest: Only the organization in which the user exists
@@ -47,8 +47,19 @@ Each system role has a default scope:
 Primary role must be one of the five standard roles, it can never be a custom role.
 
 ## Use cases
-- Administrator, single organization
-- Administrator of one organization, read-only for another organization
+### Operations
+Unless otherwise indicated, an account in the table below is assumed to be created in the organization intended to be managed.
+
+| Desired access | Role to use |
+| --- | --- |
+| Administrator of a single organization with no sub-organizations | Set primary role to Administrator |
+| Administrator of one organization, read-only for another organization
 - Network administrator, no instances
 - Administrator of customers, tag the customer orgs so that admins with that role automatically get correct permissions
+
+### Administration
 - Billing administrator
+- Trials manager
+- User manager
+- Knowledge base manager
+-
