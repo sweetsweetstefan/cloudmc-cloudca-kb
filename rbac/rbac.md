@@ -17,7 +17,8 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 ![user access control chart](roles_chart.png)
 ## Using roles to enforce user access to organizations and environments
-The function of a role is to provide a simple and standard set of permissions to users within an organization.  Custom roles can define permissions that are aligned to your business needs, and also to provide access to a user in a different organization.  Roles are enforced in the Web UI as well as in the CloudMC API.  The five roles included with CloudMC are applicable to a broad range of use cases.
+
+The function of a role is to provide a simple and standard set of system permissions to users within an organization.  Custom roles can define permissions that are aligned to your business needs, and also to provide access to a user in a different organization.  Roles are enforced in the Web UI as well as in the CloudMC API.  The five roles included with CloudMC are applicable to a broad range of use cases.
 
 Roles have a scope, which can be any of the following:
 - All organizations
@@ -47,10 +48,10 @@ Each system role has a default scope:
 Primary role must be one of the five standard roles, it can never be a custom role.
 
 ### Explanation of the environment roles
-- Viewer:
-- Networking read-only
-- Editor
-- Owner
+- Viewer:  Read-only access to the environment
+- Networking read-only: Can modify instances and storage, but gets read-only access for network configuration features
+- Editor: Can modify all features of the environment, but cannot change the environment settings nor manage users
+- Owner: Adds the ability to change the environment settings and to manage users
 
 
 ## Use cases
@@ -62,14 +63,14 @@ Unless otherwise indicated, an account in the table below is assumed to be creat
 | Management of | Set primary role to Administrator |
 | Administrator of one organization and all of its sub-organizations | Set primary role to Administrator, then an additional role of Administrator with a scope of "Specific organization and subs", and specify the organization. |
 | Access instances and storage, but no networking access | Create user account with User primary role, then add user to the target environment with the *Networking read-only* environment role |
-| Administrator of customers | Set the primary role to ... tag the customer orgs so that admins with that role automatically get correct permissions |
-| Give User-level access for an environment to a user outside of the organization | Check the "Allow external members" box in the *Edit environment* page, then go to *Manage members* and type the user's name in the search box.  Users from outside the organization appear in the section of the results titled "Users from other organizations". |
+| Administrator of customers | Create the account in System, give it Administrator role, then tag the relevant customer organizations with the same unique tag.  Add an additional role of Administator, scoped to the given tag |
+| Give User-level access for an environment to a user outside of the organization | Check the *Allow external members* box in the *Edit environment* page, then go to *Manage members* and type the user's name in the search box.  Users from outside the organization appear in the section of the results titled *Users from other organizations* |
 
 ### Administration
 | Desired access | Role to use |
 | --- | --- |
 | Billing administrator | Set primary role to Guest, create a custom role, grant only the  *Usage: View* permission |
 | Approve, deny, and purge trial organizations | Add the *Trials:Manage* permission.  Role must use *All organizations* for scope |
-| User manager | |
+| User manager, in the event that security is owned by a separate department like TecSYS | Guest account, add *Usage:View* permission |
 | Create, edit, and delete knowledge base articles | Add the *Content:Manage* permission.  Role must use *All organizations* for scope.  Will also cause the *Go to Legacy UI* option to appear in the avatar menu in the upper right corner  |
-| Create and administer organizations but cannot change pricing | Reseller minus pricing |
+| Administer but not create organizations, nor change pricing.  Has all other privileges within the organization and environments | Reseller minus pricing |
