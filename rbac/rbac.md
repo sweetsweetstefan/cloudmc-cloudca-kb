@@ -5,19 +5,19 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 ## Definitions
 - Permission: An authorization to execute a particular task.  CloudMC has system permissions which govern the CloudMC console, and environment permissions which govern a service's virtual resources.
 
-- Role: A defined collection of permissions inside an organization.  CloudMC comes with five system roles which cannot be modified: Operator, Reseller, Administrator, User, Guest.  Custom roles can be created.
+- Role: A defined collection of permissions inside an organization.  CloudMC comes with five system roles which cannot be modified: Operator, Reseller, Administrator, User, Guest.  Custom roles can be created.  
 
 - Scope: The organization or organizations to which a role is applied.
 
-- Organization: A logical unit to which users and service connections can be assigned.  A base installation of CloudMC comes with the System organization.
+- Organization: A logical unit to which users and service connections can be assigned.  A base installation of CloudMC comes with the System organization.  When an organization is deleted, any custom roles that were defined within that organization are also deleted.
 
 - User:  A user account is how an individual connects to the CloudMC portal.  A user is always assigned a primary role in a single organization. A user can be assigned additional roles, which can be scoped to one or more organizations.
 
-- Environment:  A logical unit within an organization, used to isolate and group resources securely. (Is environment relevant to RBAC?  Are Viewer/Editor/Owner documented elsewhere?  There may be some confusion for users here because when adding a user to an environment, the word "role" is used, but these are different roles.)
+- Environment:  A logical unit within an organization, used to isolate and group resources securely. Access is controlled via a combination environment roles and organization access controls.
 
 ![user access control chart](roles_chart.png)
-## Using roles to enforce user access
-The function of a role is to provide a simple and standard set of permissions to users within an organization.  Roles can also provide access to a user in a different organization.  The five roles included with CloudMC are applicable to a broad range of use cases.  
+## Using roles to enforce user access to organizations and environments
+The function of a role is to provide a simple and standard set of permissions to users within an organization.  Custom roles can define permissions that are aligned to your business needs, and also to provide access to a user in a different organization.  Roles are enforced in the Web UI as well as in the CloudMC API.  The five roles included with CloudMC are applicable to a broad range of use cases.
 
 Roles have a scope, which can be any of the following:
 - All organizations
@@ -27,13 +27,13 @@ Roles have a scope, which can be any of the following:
 - Only the sub-organizations of a specific organization
 - All organizations with a specific tag
 
-## Explanation of the system roles
+### Explanation of the system roles
 ![permissions chart](permissions.png)
 
-Summary of each role:
-- Guest: A read-only role.  Can view resources in scoped organizations.
-- User: Can create and environments in scoped environments.
-- Administrator: Can manage scoped organizations.  Cannot view sub-organizations nor create new organizations. Can create environments, users, roles, and access usage data in scoped organizations.
+Summary of each system role when applied as a primary role:
+- Guest: A read-only role.  Can view resources in the user's organization.
+- User: Can create new environments with service connections, and manage environments owned by the user.  Cannot see any existing environments until the user is added to the environments.
+- Administrator: Can manage the organization. Can see all environments in all service connections.  Cannot view sub-organizations nor create new sub-organizations.
 - Reseller: Can manage branding and pricing in scoped organizations and sub-organizations.
 - Operator: Can create organizations, manage service connections, quotas, commitments, and full access to all other organizations and system resources.
 
@@ -46,20 +46,30 @@ Each system role has a default scope:
 
 Primary role must be one of the five standard roles, it can never be a custom role.
 
+### Explanation of the environment roles
+- Viewer:
+- Networking read-only
+- Editor
+- Owner
+
+
 ## Use cases
 ### Operations
-Unless otherwise indicated, an account in the table below is assumed to be created in the organization intended to be managed.
+Unless otherwise indicated, an account in the table below is assumed to be created in the organization intended to be managed, by an Operator in the System organization.  This may affect the scope of the organization when applying a desired role.
 
 | Desired access | Role to use |
 | --- | --- |
-| Administrator of a single organization with no sub-organizations | Set primary role to Administrator |
-| Administrator of one organization, read-only for another organization
-- Network administrator, no instances
-- Administrator of customers, tag the customer orgs so that admins with that role automatically get correct permissions
+| Management of | Set primary role to Administrator |
+| Administrator of one organization and all of its sub-organizations | Set primary role to Administrator, then an additional role of Administrator with a scope of "Specific organization and subs", and specify the organization. |
+| Access instances and storage, but no networking access | Create user account with User primary role, then add user to the target environment with the *Networking read-only* environment role |
+| Administrator of customers | Set the primary role to ... tag the customer orgs so that admins with that role automatically get correct permissions |
+| Give User-level access for an environment to a user outside of the organization | Check the "Allow external members" box in the *Edit environment* page, then go to *Manage members* and type the user's name in the search box.  Users from outside the organization appear in the section of the results titled "Users from other organizations". |
 
 ### Administration
-- Billing administrator
-- Trials manager
-- User manager
-- Knowledge base manager
--
+| Desired access | Role to use |
+| --- | --- |
+| Billing administrator | Set primary role to Guest, create a custom role, grant only the  *Usage: View* permission |
+| Approve, deny, and purge trial organizations | Add the *Trials:Manage* permission.  Role must use *All organizations* for scope |
+| User manager | |
+| Create, edit, and delete knowledge base articles | Add the *Content:Manage* permission.  Role must use *All organizations* for scope.  Will also cause the *Go to Legacy UI* option to appear in the avatar menu in the upper right corner  |
+| Create and administer organizations but cannot change pricing | Reseller minus pricing |

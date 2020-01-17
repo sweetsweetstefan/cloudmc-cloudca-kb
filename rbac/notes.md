@@ -22,3 +22,12 @@ Is there a use-case for a guest account in System with an additional role of Ope
 Look at the permissions and see what you can't shuffle together in terms of ideas for roles.  For example, billing admin.  Could there be a network only admin easily possible?
 
 Why is it  that for the stef-test accout, which has a primary role of guest in the System org, can't create accounts even though the name of the permission is Environments: Create and scoped to the Aptum org.  How come the guest account needs the Environments:Own All permission is necessary for getting this to work,
+
+
+What if a single email address needs to be added as a user to multiple organizations?  
+
+Can someone with a primary role as user inside an organization be restricted to particular service connections?
+
+So a User can see all service connections and can create environments, but can't see any existing environments until they're added.
+
+Interesting note:  if you give a custom role zero privileges and scope global, they will be able to see every organization, but they won't see any environments inside the organization.
