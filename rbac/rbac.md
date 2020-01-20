@@ -11,25 +11,27 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 - Organization: A logical unit to which users and service connections can be assigned.  A base installation of CloudMC comes with the System organization.  When an organization is deleted, any custom roles that were defined within that organization are also deleted.
 
-- User:  A user account is how an individual connects to the CloudMC portal.  A user is always assigned a primary role in a single organization. A user can be assigned additional roles, which can be scoped to one or more organizations.
+- User:  A user account is how an individual connects to the CloudMC portal.  A user is always assigned a primary role in a single organization. A user can be assigned additional roles, which can be scoped to one or more organizations, thereby giving a user permission to access that other organization with the permissions defined in the role.
 
 - Environment:  A logical unit within an organization, used to isolate and group resources securely. Access is controlled via a combination environment roles and organization access controls.
 
 ![user access control chart](roles_chart.png)
 ## Using roles to enforce user access to organizations and environments
 
-The function of a role is to provide a simple and standard set of system permissions to users within an organization.  Custom roles can define permissions that are aligned to your business needs, and also to provide access to a user in a different organization.  Roles are enforced in the Web UI as well as in the CloudMC API.  The five roles included with CloudMC are applicable to a broad range of use cases.
+The function of a role is to provide a simple and standard set of system permissions to users within an organization.  Custom roles can define permissions that are aligned to your business needs, and also to provide access to a user in a different organization.  Roles are enforced in the Web UI as well as in the CloudMC API.
 
-Roles have a scope, which can be any of the following:
-- All organizations
-- Top-level organizations only
+Roles have a *scope*, which can be any of the following:
+- All organizations in CloudMC
+- Only the top-level organizations
 - A specific organization but not its sub-organizations
-- A specific organization and its sub-organizations
+- A specific organization and all of its sub-organizations
 - Only the sub-organizations of a specific organization
 - All organizations with a specific tag
 
-### Explanation of the system roles
+### System roles
 ![permissions chart](permissions.png)
+
+The five roles included with CloudMC are applicable to a broad range of use cases.  They can be assigned to a user's primary role, or as an additional role.
 
 Summary of each system role when applied as a primary role:
 - Guest: A read-only role.  Can view resources in the user's organization.
@@ -45,17 +47,34 @@ Each system role has a default scope:
 - Reseller: The organization in which the user exists and all of its sub-organizations
 - Operator: All organizations
 
-Primary role must be one of the five standard roles, it can never be a custom role.
 
-### Explanation of the environment roles
+## Custom Roles
+
+CloudMC allows [admins?] to create new roles with permissions that are aligned with specific business needs.  The [administrator] can select individual permissions and save the role, then apply that role to users within the organization.  Custom roles are applied to a user by joining the permissions of all the user's assigned roles.  A user's primary role must be one of the five standard roles, never a custom role.
+
+### Creating a custom role
+![edit custom role page](edit_custom_role.png)
+
+### Environment roles
 - Viewer:  Read-only access to the environment
 - Networking read-only: Can modify instances and storage, but gets read-only access for network configuration features
 - Editor: Can modify all features of the environment, but cannot change the environment settings nor manage users
 - Owner: Adds the ability to change the environment settings and to manage users
 
 
-## Use cases
-### Operations
+### How to use roles
+
+Primary roles are assigned to a user in the *Edit user* page.
+
+![edit user page, primary role](select_primary_role.png)
+
+Additional roles are assigned to a user by going to the *Edit user* page and clicking on *Additional roles*
+
+![additional roles page](additional_roles.png)
+
+The following are use cases to illustrate some ways that roles can be used, based on the different kinds of access that a user may need.
+
+#### Operations
 Unless otherwise indicated, an account in the table below is assumed to be created in the organization intended to be managed, by an Operator in the System organization.  This may affect the scope of the organization when applying a desired role.
 
 | Desired access | Role to use |
@@ -66,7 +85,7 @@ Unless otherwise indicated, an account in the table below is assumed to be creat
 | Administrator of customers | Create the account in System, give it Administrator role, then tag the relevant customer organizations with the same unique tag.  Add an additional role of Administator, scoped to the given tag |
 | Give User-level access for an environment to a user outside of the organization | Check the *Allow external members* box in the *Edit environment* page, then go to *Manage members* and type the user's name in the search box.  Users from outside the organization appear in the section of the results titled *Users from other organizations* |
 
-### Administration
+#### Administration
 | Desired access | Role to use |
 | --- | --- |
 | Billing administrator | Set primary role to Guest, create a custom role, grant only the  *Usage: View* permission |
