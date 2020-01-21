@@ -57,7 +57,7 @@ CloudMC allows users with the *Roles:Manage* permission (such as the *Administra
 #### Creating a custom role
 The *Administration* -> *Roles* page lists system role and any custom roles that have been created in the organization.  To add a custom role, click the *Add custom role* button at the upper-right corner of the page.
 
-![edit custom role page](edit_custom_role.png)
+![add custom role page](add_custom_role.png)
 
 ### Environment roles
 When adding a new member to an environment, that user must be assigned an environment role, which governs the level of access this user will be granted within the environment:
