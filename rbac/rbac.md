@@ -19,7 +19,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 ## How roles work
 
-The function of a role is to provide a simple and standard set of system permissions, which can then be assigned to users within an organization.  (For environment roles, see section *Environment Roles*.)  Roles are enforced in the Web user interface as well as in the CloudMC API.  Custom roles can define permissions that are aligned to business needs, and can also provide access to a different organization.
+The function of a role is to control access to CloudMC functionality in a simple, standard way.  (For environment roles, see section *Environment Roles*.)  A role can be assigned to users within an organization.  Roles are enforced in the Web user interface as well as in the CloudMC API.  Custom roles can define permissions that are aligned to business needs, and can also enable collaboration by granting access to a different organization.
 
 All roles have a *scope*, which can be any of the following:
 - All organizations in CloudMC
@@ -28,6 +28,8 @@ All roles have a *scope*, which can be any of the following:
 - A specific organization and all of its sub-organizations
 - Only the sub-organizations of a specific organization
 - All organizations with a specific tag
+
+Through the use of tagging, scope for an assigned role can be automatically extended to organizations that get tagged, and scope can be removed when a tag is erased.  This feature enables scenarios where role scope changes dynamically based on business rules.
 
 ### System roles
 The five roles included with CloudMC are applicable to a broad range of use cases.  They can be assigned to a user's primary role, or as an additional role.
@@ -44,7 +46,7 @@ Each system role has a default scope:
 - Reseller: The organization in which the user exists and all of its sub-organizations
 - Operator: All organizations
 
-As the diagram below indicates, going up the chain each role has all of the privileges as the preceding one:
+As the diagram below indicates, rising through the hierarchy every role has all of the privileges as the preceding one:
 
 ![permissions chart](permissions.png)
 
@@ -93,7 +95,7 @@ The following are use cases to illustrate the flexibility of CloudMC roles with 
 | Administrator of one organization and all of its sub-organizations (Sub-org Administrator) | Primary role *Administrator*, then an additional role of *Administrator* with a scope of **Specific organization and subs**, and specify the organization. Account will inherit ownership role over all environments in the organization |
 | Manage instances and storage, but no networking access (Networking read-only) | Primary role *User*, add user to the target environment with the *Networking read-only* environment role |
 | Manage all environments and sub-organizations across multiple organizations (Managed Services Administrator) | Tag the relevant customer organizations with the same unique tag.  Create the account in a separate organization.  Additional role of Administrator, scoped to **All organizations with a specific tag**, and specify the tag.  When new organizations are created with the tag, the administrator will automatically get the appropriate access  |
-| Give User-level access for an environment to a user outside of the organization | Check the *Allow external members* box in the *Edit environment* page, then go to *Manage members* and type the user's name in the search box.  Users from outside the organization appear in the section of the results titled *Users from other organizations* [TEST THIS] |
+| Give User-level access for an environment to a user outside of the organization | Check the *Allow external members* box in the *Edit environment* page, then go to *Manage members* and type the user's name in the search box.  Users from outside the organization appear in the section of the results titled *Users from other organizations* |
 
 
 #### Administration
@@ -105,4 +107,4 @@ The following are use cases to illustrate the flexibility of CloudMC roles with 
 | Create and delete users only (User Manager) | Additional custom role with the *Usage:View* permission, scoped for the desired organizations |
 | Create, edit, and delete knowledge base articles | Additional custom role with the *Content:Manage* permission.  Role must use *All organizations* for scope.  Will also cause the *Go to Legacy UI* option to appear in the avatar menu in the upper right corner  |
 | Administer but not create organizations, nor change pricing.  Has all other privileges within the organization and environments | Primary role *Guest*, additional role with all Reseller, Admin, and User permissions except for *Monetization:Manage* |
-| Select logos and colour schemes (Branding manager) | Additional custom role with the permission *Branding:Manage*, scoped to the desired organizations (New questions here: does this actually have to be scoped to all organizations? Will this cause the legacy UI menu option to appear?  Need to test.) |
+| Select logos and colour schemes (Branding manager) | Additional custom role with the permission *Branding:Manage*, scoped to the desired organizations (Wait... when I test this, the Go To Legacy UI menu option doesn't appear unless primary role is Operator.  Reseller is not enough.) |
