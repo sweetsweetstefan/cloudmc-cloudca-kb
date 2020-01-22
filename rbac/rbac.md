@@ -15,7 +15,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 - Environment:  A logical unit within an organization, used to isolate and group resources securely. Access is controlled via a combination of environment roles and organization access controls
 
-![user access control chart](roles_chart.png) (Simplify and prettify the diagram)
+![user access control chart](roles_chart.png)
 
 ## Using roles to enforce user access
 
@@ -50,7 +50,7 @@ As the diagram below indicates, going up the chain each role has all of the priv
 
 ### Custom Roles
 
-CloudMC allows users with the *Roles:Manage* permission (such as the *Administrator* role and higher) to create new roles with permissions that are aligned with specific business needs.  The administrator can select individual permissions and save the role, then apply that role to users within the organization.  Custom roles are applied to a user by joining the permissions of all the user's assigned roles.  A user's primary role must be one of the five standard roles, never a custom role.
+CloudMC allows users with the *Administrator* role and higher (or users with a custom role that includes the *Roles:Manage* permission) to create new roles with permissions that are aligned with specific business needs.  The administrator can select individual permissions and save the role, then apply that role to users within the organization.  Custom roles are applied to a user by joining the permissions of all the user's assigned roles.  A user's primary role must be one of the five standard roles, never a custom role.
 
 **Important**: When an organization is deleted, any custom roles that were defined within that organization are also deleted.
 
