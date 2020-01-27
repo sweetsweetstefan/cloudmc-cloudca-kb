@@ -1,6 +1,8 @@
 # Administrator guide:  Login entrypoint
 
-When presenting CloudMC services to end-users, two separate models of login are available to the cloud operator:
+When planning a deployment of CloudMC, it is important to decide how CloudMC services will be presented to end-users.  Will there be a single URL for all organizations, or will each organization be accessed via a custom URL unique to that organization?
+
+CloudMC provides two separate models of login to the cloud operator:
 - Each organization receives a unique domain name, the login page is accessed via a URL with that unique domain name, and end-users log in with a username defined in the organization
 - All services are exposed via a single common domain name, the login page is access via a common URL with that domain name, and end-users log in with an email address that is unique across all organizations in the system
 
