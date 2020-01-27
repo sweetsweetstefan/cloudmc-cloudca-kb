@@ -17,7 +17,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 - **Environment Role:** A defined collection of environment permissions that are applied to the members of an environment
 
-![user access control chart](roles_chart.png)
+![user access control chart](roles_chart-en.png)
 
 ## System roles
 
@@ -50,7 +50,7 @@ Each system role has a default scope:
 
 As the diagram below indicates, rising through the hierarchy every role has all of the privileges as the preceding one:
 
-![permissions chart](permissions.png)
+![permissions chart](permissions-en.png)
 
 ### Custom Roles
 
@@ -61,7 +61,7 @@ CloudMC allows users with the *Administrator* role and higher (or users with a c
 #### Creating a custom role
 The *Administration* -> *Roles* page lists system roles and any custom roles that have been created in the organization.  To add a custom role, click the *Add custom role* button at the upper-right corner of the page.  On the *Add custom role* page, enter a name, an optional description, and then select the desired permissions to assign to the role.  Permissions are named in the format *Feature:Operation* and are grouped according to the system role that they are assigned by default.
 
-![add custom role page](add_custom_role.png)
+![add custom role page](add_custom_role-en.png)
 
 ## Environment roles
 To control access to resources within an environment, CloudMC introduces the concept of the *environment role*.  When adding a new member to an environment, that user must be assigned an environment role, which governs the level of access this user will be granted within the environment.  Most plugins ship with these standard environment roles:
@@ -74,15 +74,15 @@ To control access to resources within an environment, CloudMC introduces the con
 
 Primary roles are assigned to a user in the *Edit user* page.
 
-![edit user page, primary role](select_primary_role.png)
+![edit user page, primary role](select_primary_role-en.png)
 
 Additional roles are assigned to a user by going to the *Edit user* page and clicking on *Additional roles*
 
-![additional roles page](additional_roles.png)
+![additional roles page](additional_roles-en.png)
 
 Environment roles are assigned to a user when adding members to an environment, by navigating to the desired service, clicking on the three-dot menu to the right of the desired environment, and typing a name in the text box labeled *Add member to environment*:
 
-![edit environment members page](list_of_env_roles.png)
+![edit environment members page](list_of_env_roles-en.png)
 
 ## Use cases
 
@@ -90,7 +90,7 @@ The following are use cases to illustrate the flexibility of CloudMC roles with 
 
 The diagram below depicts two hypothetical organizations with environments and a sub-organization.  Note that Organization A has two tags, **billable** and **managed**, and Sub-organization C has one tag, **billable**.
 
-![use cases diagram](use_cases.png)
+![use cases diagram](use_cases-en.png)
 
 #### Operations
 
