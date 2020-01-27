@@ -24,7 +24,7 @@ Under this model, users are created within each organization, and are completely
 
 Because each organization has a unique URL, the login page can be customized with a logo for branding for each organization.
 
-### Pros and cons
+### Comparison
 | Feature | Single-entrypoint | Multi-entrypoint |
 | --- | --- | --- |
 | URL to access CloudMC | Common URL for all organizations | Each organization is accessed via a unique URL |
@@ -44,7 +44,9 @@ Because each organization has a unique URL, the login page can be customized wit
 ## How to implement
 ### Properties to set
 single_entrypoint_enabled
+
 login_via_email_enabled
+
 login_via_username_enabled
 
 ### Changing login model
