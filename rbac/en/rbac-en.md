@@ -83,3 +83,8 @@ Additional roles are assigned to a user by going to the *Edit user* page and cli
 Environment roles are assigned to a user when adding members to an environment, by navigating to the desired service, clicking on the three-dot menu to the right of the desired environment, and typing a name in the text box labeled *Add member to environment*:
 
 ![edit environment members page](list_of_env_roles-en.png)
+
+---
+[Use cases - Basic](use-cases-basic-en.md)
+
+[Use cases - Advanced](use-cases-advanced-en.md)
