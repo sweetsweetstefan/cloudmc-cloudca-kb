@@ -9,7 +9,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 - **Scope:** The organization or organizations to which a system role is applied
 
-- **Organization:** A grouping of related end-users.  A base installation of CloudMC comes with the System organization
+- **Organization:** A grouping of related end-users.  A base installation of CloudMC comes with the **System** organization
 
 - **User:**  A user account is how an individual connects to the CloudMC portal.  A user is always assigned a primary system role in a single organization. A user can be assigned additional system roles, which can be scoped to one or more organizations
 
