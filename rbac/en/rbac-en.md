@@ -5,7 +5,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 ## Definitions
 - **Permission:** An authorization to execute a particular task.  **System permissions** govern access to functionality in the CloudMC console, **environment permissions** govern access to a service's resources
 
-- **System Role:** A defined collection of system permissions inside an organization.  CloudMC comes with five **fixed roles** which cannot be modified, and **custom roles** can be created.  Generally, system roles are referred to simply as "roles"
+- **System Role:** A collection of system permissions inside an organization.  CloudMC comes with five **fixed roles** which cannot be modified, and **custom roles** can be created.  Generally, system roles are referred to simply as "roles"
 
 - **Scope:** The organization or organizations to which a system role is applied
 
@@ -15,7 +15,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 - **Environment:**  A logical unit within an organization, used to isolate and group resources securely. Access is controlled via a combination of environment roles and organization access controls
 
-- **Environment Role:** A defined collection of environment permissions that are applied to the members of an environment
+- **Environment Role:** A defined collection of environment permissions that is applied to the members of an environment
 
 ![user access control chart](roles_chart-en.png)
 
