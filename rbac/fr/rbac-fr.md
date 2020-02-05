@@ -30,14 +30,26 @@ Tous les rôles système ont une portée défini, qui peut être un des ceux ci-
 - Seulement les sous-organisations d'une organisation spécifique
 - Toutes les organisations avec un étiquette specifique
 
-En utilisant les étiquettes, la portée pour un rôle assigné peut être augmentée automatiquement aux organisations qui
+En utilisant les étiquettes, la portée d'un rôle assigné peut être augmentée automatiquement aux organisations qui reçois l'étiquette, et retiré lorsque l'ettiquette est supprimée.  Cette fonctionnalité rendre possible les scénarios où la portée d'un role se change dynamiquement selon les règles d'affaires.
 
 ### Les rôles fixes
-- Invité
-- Utilisateur
-- Administrateur
-- Revendeur
-- Opérateur
+Les rôles fixes incorporés dans CloudMC s'appliquent à un vaste gamme de cases d'utilisation.  Ils peut être assignés au rôle primary d'un utilisateur, aussi bien qu'un rôle additionel.
+
+Un sommaire de chaque rôle fixe quand il est appliqué au rôle primaire :
+- **Invité :**  Un rôle lecture seule.  Peut voir les ressources dans les environnements duquels l'utilisateur est membre
+- **Utilisateur :**  Peut créer environnements nouveaux avec les connexions de service existant, et gérer ceux environnements possédés par l'utilisateur
+- **Administrateur :**  Peut gérer l'organisation.  Peut gérer tous les environnements dans toutes les connexions de service.  Pas capable ni de voir les sous-organisations ni de créer des nouvelles sous-organsiations
+- **Revendeur :** Peut gérer l'image de marque et la tarification pour l'organisation et ses sous-organisations, et peut créer des sous-organisations dans l'organisation.  Pas capable de créer des nouvelles organsiations
+- **Opérateur :** Peut créer des organisations et des sous-organisations, gérer les connexions de service, les quotas de service, les engagements, et a le plein accès aux toutes autres organisations, ressources et paramètres du système
+
+Chaque rôle fixe a un défaut portée :
+- Invité, Utilisateur, et Administrateur :  Seulement l'organisation dedans est crée l'utilisateur
+- Revendeur : L'organisation dedans es crée l'utilisateur et toutes ses sous-organisations
+- Opérateur : Toutes les organisations
+
+Comme l'illustre le diagramme ci-dessous, en monter dans le hiérarchie chaque rôle reçoit toutes les privilèges de ceux qui prècedent :
+
+![permissions chart](permissions-en.png)
 
 ### Les rôles personnalisés
 Le rôle primaire de l'utilisateur doit être un des rôles fixes incorporés, jamais un rôle personnalisé.

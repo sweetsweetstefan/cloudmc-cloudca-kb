@@ -23,7 +23,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 The function of a system role is to control access to CloudMC functionality in a simple, standard way.  A system role can be assigned to users within an organization, and can also enable cross-organization collaboration.  System roles are enforced in the Web user interface as well as in the CloudMC API.  Custom roles can be defined with permissions that are aligned to business needs.
 
-All system roles have a *scope*, which can be any of the following: [MIGHT CREATE DIAGRAMS]
+All system roles have a *scope*, which can be one of the following: [MIGHT CREATE DIAGRAMS]
 - All organizations in CloudMC
 - Only the top-level organizations
 - A specific organization but not its sub-organizations
@@ -36,14 +36,14 @@ Through the use of tagging, scope for an assigned role can be automatically exte
 ### Fixed roles
 The fixed roles included with CloudMC are applicable to a broad range of use cases.  They can be assigned to a user's primary role, or as an additional role.
 
-Summary of each system role when applied as a primary role in a single organization or sub-organization:
+A summary of each fixed role when applied as a primary role:
 - **Guest:** A read-only role.  Can view resources in assigned environments
 - **User:** Can create new environments with existing service connections, and manage environments owned by the user.  Cannot see any existing environments until the user is added to them
 - **Administrator:** Can manage the organization. Can manage all environments in all service connections.  Cannot view sub-organizations nor create new sub-organizations
-- **Reseller:** Can manage branding and pricing in scoped organizations and sub-organizations, can create sub-organizations in the organization, but not new organizations
+- **Reseller:** Can manage branding and pricing in the organization and its sub-organizations, and can create sub-organizations in the organization.  Cannot create new organizations
 - **Operator:** Can create organizations and sub-organizations, manage service connections, quotas, commitments, and has full access to all other organizations, system resources and settings
 
-Each system role has a default scope:
+Each fixed role has a default scope:
 - Guest, User, Administrator: Only the organization in which the user exists
 - Reseller: The organization in which the user exists and all of its sub-organizations
 - Operator: All organizations
