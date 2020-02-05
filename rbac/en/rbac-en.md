@@ -1,17 +1,17 @@
 # Administrator guide: Role-based access controls
 
-Access control in CloudMC is achieved through a flexible, multi-tenant model that provides a simplified way to manage permissions across a hierarchy of organizations and environments.  Role-based access control (RBAC) features built into CloudMC allow fine-grained control over the permissions which are granted to users. T
+Access control in CloudMC is achieved through a flexible, multi-tenant model that provides a simplified way to manage permissions across a hierarchy of organizations and environments.  Role-based access control (RBAC) features built into CloudMC allow fine-grained control over the permissions which are granted to users.
 
 ## Definitions
 - **Permission:** An authorization to execute a particular task.  **System permissions** govern access to functionality in the CloudMC console, **environment permissions** govern access to a service's resources
 
-- **System Role:** A collection of system permissions inside an organization.  CloudMC comes with five **fixed roles** which cannot be modified, and **custom roles** can be created.  Generally, system roles are referred to simply as "roles"
+- **System Role:** A collection of system permissions inside an organization.  CloudMC comes with **fixed roles** which cannot be modified, and **custom roles** can be created.  Generally, system roles are referred to simply as "roles"
 
 - **Scope:** The organization or organizations to which a system role is applied
 
 - **Organization:** A grouping of related end-users.  A base installation of CloudMC comes with the **System** organization
 
-- **User:**  A user account is how an individual connects to the CloudMC portal.  A user is always assigned a primary system role in a single organization. A user can be assigned additional system roles, which can be scoped to one or more organizations
+- **User:**  A user account is how an individual connects to the CloudMC portal.  A user is always assigned a primary system role in the organization the account was created. A user can be assigned additional system roles, which can be scoped to one or more organizations
 
 - **Environment:**  A logical unit within an organization, used to isolate and group resources securely. Access is controlled via a combination of environment roles and organization access controls
 
@@ -21,7 +21,7 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 ## System roles
 
-The function of a system role is to control access to CloudMC functionality in a simple, standard way.  A system role can be assigned to users within an organization.  System roles are enforced in the Web user interface as well as in the CloudMC API.  Custom roles can define permissions that are aligned to business needs, and can also enable cross-organization collaboration.
+The function of a system role is to control access to CloudMC functionality in a simple, standard way.  A system role can be assigned to users within an organization, and can also enable cross-organization collaboration.  System roles are enforced in the Web user interface as well as in the CloudMC API.  Custom roles can be defined with permissions that are aligned to business needs.
 
 All system roles have a *scope*, which can be any of the following: [MIGHT CREATE DIAGRAMS]
 - All organizations in CloudMC
@@ -34,12 +34,12 @@ All system roles have a *scope*, which can be any of the following: [MIGHT CREAT
 Through the use of tagging, scope for an assigned role can be automatically extended to organizations that get tagged, and removed when a tag is erased.  This feature enables scenarios where role scope changes dynamically based on business rules.
 
 ### Fixed roles
-The five roles included with CloudMC are applicable to a broad range of use cases.  They can be assigned to a user's primary role, or as an additional role.
+The fixed roles included with CloudMC are applicable to a broad range of use cases.  They can be assigned to a user's primary role, or as an additional role.
 
 Summary of each system role when applied as a primary role in a single organization or sub-organization:
 - **Guest:** A read-only role.  Can view resources in assigned environments
 - **User:** Can create new environments with existing service connections, and manage environments owned by the user.  Cannot see any existing environments until the user is added to them
-- **Administrator:** Can manage the organization. Can manage all environments in all service connections.  Cannot view sub-organizations nor create new sub-organizations.
+- **Administrator:** Can manage the organization. Can manage all environments in all service connections.  Cannot view sub-organizations nor create new sub-organizations
 - **Reseller:** Can manage branding and pricing in scoped organizations and sub-organizations, can create sub-organizations in the organization, but not new organizations
 - **Operator:** Can create organizations and sub-organizations, manage service connections, quotas, commitments, and has full access to all other organizations, system resources and settings
 
@@ -54,7 +54,7 @@ As the diagram below indicates, rising through the hierarchy every role has all 
 
 ### Custom Roles
 
-CloudMC allows users with the *Administrator* role and higher (or users with a custom role that includes the *Roles:Manage* permission, explained in this section) to create new roles with permissions that are aligned with specific business needs.  The administrator can select individual permissions and save the role, then apply that role to users within the organization.  A user's effective rights are governed by the union of all the permissions and scope of the primary role with all additional roles.  A user's primary role must be one of the five fixed roles, it cannot be a custom role.
+CloudMC allows users with the *Administrator* role and higher (or users with a custom role that includes the *Roles:Manage* permission, explained in this section) to create new roles with permissions that are aligned with specific business needs.  The administrator can select individual permissions and save the role, then apply that role to users within the organization.  A user's effective rights are governed by the union of all the permissions and scope of the primary role with all additional roles.  A user's primary role must be one of the built-in fixed roles, it cannot be a custom role.
 
 **Important:** When an organization is deleted, any custom roles that were defined within that organization are also deleted.
 
