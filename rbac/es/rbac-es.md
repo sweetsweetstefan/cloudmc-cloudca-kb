@@ -20,16 +20,16 @@ El control de acceso en CloudMC se alcanza a través un modelo flexible y multi-
 ![user access control chart](roles_chart-es.png)
 
 ## Los roles de sistema
-La función del rol de sistema es a controlar el acceso a la funcionalidad de CloudMC en una manera sencilla y estandardizada.  Un rol de sistema puede ser asignado a usuarios dentro de una organización, además que permitir la colaboración a travès de las organizaciónes.  Los roles de sistema se aplican en el interfaz Web así como en el API de CloudMC.  Los roles personalizados pueden ser definidos con permisos que son alineados con las reglas del negocio.
+La función del rol de sistema es a controlar el acceso a la funcionalidad de CloudMC en una manera sencilla y estandardizada.  Un rol de sistema puede ser asignado a usuarios dentro de una organización, además que permitir la colaboración a travès de las organizaciónes.  Los roles de sistema se aplican en la interfaz Web así como en el API de CloudMC.  Los roles personalizados pueden ser definidos con permisos que son alineados con las reglas del negocio.
 
 Cada uno de los roles de sistema tiene un *alcance*, que puede ser uno de los siguientes:
 
-- Todas las organizaciones
-- Solamente las organizaciones de nivel superior
-- Una organización específica sin sus sub-organizaciones
-- Una organización específica con todos sus sub-organizaciones
-- Solamente las sub-organizaciones de una organización específica
-- Todas la organizaciones con una etiqueta específica
+- Todas las organizaciones.
+- Solamente las organizaciones de nivel superior.
+- Una organización específica sin sus sub-organizaciones.
+- Una organización específica con todos sus sub-organizaciones.
+- Solamente las sub-organizaciones de una organización específica.
+- Todas la organizaciones con una etiqueta específica.
 
 Usando la funcionalidad de etiquetas, el alcance de un rol asignado puede crecer automaticamente cuando una organización está etiquetada, y se peuede reducir cuando la etiqueta se borra.  Esto permite escenarios donde el alcance del rol puede cambiarse en una manera dinámica basado en las reglas del negocio.
 
@@ -44,9 +44,9 @@ Un sumario de cada rol fijado cuando aplicado como un rol primario:
 - **Operador:**  Puede crear organizaciones y sub-organizaciones, gestionar conexiones de servicio, cuotas de servicio, compromisos, y tiene acceso completo a todas otras organizaciones, recursos y parámetros del sistema.
 
 Cada rol fijado tiene un alcance predeterminado:
-- Invitado, Usuario, y Administrador:  Solamenta la organización dentro de que existe la cuenta usuaria
-- Revendedor:  La organización dentro de que existe la cuenta usuaria, y todas sus sub-organizaciones
-- Operador:  Todas las organizaciones
+- Invitado, Usuario, y Administrador:  Solamenta la organización dentro de que existe la cuenta usuaria.
+- Revendedor:  La organización dentro de que existe la cuenta usuaria, y todas sus sub-organizaciones.
+- Operador:  Todas las organizaciones.
 
 Como india el diagrama abajo, subiendo por la jerarquía cada rol tiene todos los privilegios que los precedents:
 
@@ -54,12 +54,12 @@ Como india el diagrama abajo, subiendo por la jerarquía cada rol tiene todos lo
 
 ### Los roles personalizados
 
-CloudMC permite los usuarios con el rol de *Administrador* o mayor (o los usuarios con un rol personalizado que incluye el permiso *Roles:Gestionar*, explicado abajo en esta sección) a crear nuevos roles con permisos que están alineados con las necesidades commerciales específicas para la empresa.  El administrador selecciona los permisos individuals y guarde el rol, y luego lo aplica a los usuarios dentro de la organización.  Los derechos efectivos están regidos por la unión del entero de permisos y alcances del rol primario con los de todos otros roles asignados.  El rol primario de un usuaiaro tiene que ser uno de los roles fijados incorporados en CloudMC, jamás un rol personalizado.
+CloudMC permite los usuarios con el rol de *Administrador* o mayor (o los usuarios con un rol personalizado que incluye el permiso *Roles: Gestionar*, explicado abajo en esta sección) a crear nuevos roles con permisos que están alineados con las necesidades commerciales específicas para la empresa.  El administrador selecciona los permisos individuals y guarde el rol, y luego lo aplica a los usuarios dentro de la organización.  Los derechos efectivos están regidos por la unión del entero de permisos y alcances del rol primario con los de todos otros roles asignados.  El rol primario de un usuaiaro tiene que ser uno de los roles fijados incorporados en CloudMC, jamás un rol personalizado.
 
 **Aviso:**  Al momento de eliminar una organización, todos los roles personalizados definidos adentro de tal organización son borrados al mismo tiempo.
 
 #### Crear un rol personalizado
-La página *Administración* -> *Roles* enumera los roles de sistema y todos roles personalizados que se crearon en la organización.  Para añadir un rol personalizado, hacer clic en el botón *Agregar un rol personalizado*, ubicado en la superior-derecha de la página.  En la página *Agregar un rol personalizado*, rellenar el cuarto de texto con el nobmre para el nuevo rol, con una descripción opcional, y entonces seleccionar los permisos deseados para asignar al rol.  Los nombres de los permisos están escritos en el formato *Característica:Operación* y están agrupados en confirmidad con el rol de sistema a cuál el permiso está asignado por defecto.
+La página *Administración* -> *Roles* enumera los roles de sistema y todos roles personalizados que se crearon en la organización.  Para añadir un rol personalizado, hacer clic en el botón *Agregar un rol personalizado*, ubicado en la superior-derecha de la página.  En la página *Agregar un rol personalizado*, rellenar el cuarto de texto con el nobmre para el nuevo rol, con una descripción opcional, y entonces seleccionar los permisos deseados para asignar al rol.  Los nombres de los permisos están escritos en el formato *Característica: Operación* y están agrupados en confirmidad con el rol de sistema a cuál el permiso está asignado por defecto.
 
 ![add custom role page](add_custom_role-en.png)
 
@@ -84,7 +84,7 @@ Los roles entornales se asignan a un usuario al añadir un miembro a un entorno:
 1. Navegar al servicio deseado.
 1. Hacer clic en el menú de tres puntos a la derecha del entorno deseado.
 1. Seleccionar *Administrar miembros*.
-1. En la próxima página, rellenar con un nombre el cuadro de texto marcado *Añadir miembro al entorno*.
+1. En la página siguiente, rellenar con un nombre del usuario a añadir en el cuadro de texto marcado *Añadir miembro al entorno*.
 
 ![edit environment members page](list_of_env_roles-en.png)
 

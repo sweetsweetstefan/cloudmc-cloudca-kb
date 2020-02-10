@@ -23,13 +23,13 @@ Access control in CloudMC is achieved through a flexible, multi-tenant model tha
 
 The function of a system role is to control access to CloudMC functionality in a simple, standard way.  A system role can be assigned to users within an organization, and can also enable cross-organization collaboration.  System roles are enforced in the Web user interface as well as in the CloudMC API.  Custom roles can be defined with permissions that are aligned to business needs.
 
-All system roles have a *scope*, which can be one of the following: [MIGHT CREATE DIAGRAMS]
-- All organizations in CloudMC
-- Only the top-level organizations
-- A specific organization but not its sub-organizations
-- A specific organization and all of its sub-organizations
-- Only the sub-organizations of a specific organization
-- All organizations with a specific tag
+All system roles have a *scope*, which can be one of the following:
+- All organizations in CloudMC.
+- Only the top-level organizations.
+- A specific organization but not its sub-organizations.
+- A specific organization and all of its sub-organizations.
+- Only the sub-organizations of a specific organization.
+- All organizations with a specific tag.
 
 Through the use of tagging, scope for an assigned role can be automatically extended to organizations that get tagged, and removed when a tag is erased.  This feature enables scenarios where role scope changes dynamically based on business rules.
 
@@ -44,9 +44,9 @@ A summary of each fixed role when applied as a primary role:
 - **Operator:** Can create organizations and sub-organizations, manage service connections, quotas, commitments, and has full access to all other organizations, system resources and settings.
 
 Each fixed role has a default scope:
-- Guest, User, Administrator: Only the organization in which the user account exists
-- Reseller: The organization in which the user exists and all of its sub-organizations
-- Operator: All organizations
+- Guest, User, Administrator: Only the organization in which the user account exists.
+- Reseller: The organization in which the user exists and all of its sub-organizations.
+- Operator: All organizations.
 
 As the diagram below indicates, rising through the hierarchy every role has all of the privileges as the preceding one:
 
@@ -54,12 +54,12 @@ As the diagram below indicates, rising through the hierarchy every role has all 
 
 ### Custom Roles
 
-CloudMC allows users with the *Administrator* role and higher (or users with a custom role that includes the *Roles:Manage* permission, explained in this section) to create new roles with permissions that are aligned with specific business needs.  The administrator can select individual permissions and save the role, then apply that role to users within the organization.  A user's effective rights are governed by the union of all the permissions and scope of the primary role with all additional roles.  A user's primary role must be one of the built-in fixed roles, it cannot be a custom role.
+CloudMC allows users with the *Administrator* role and higher (or users with a custom role that includes the *Roles: Manage* permission, explained in this section) to create new roles with permissions that are aligned with specific business needs.  The administrator can select individual permissions and save the role, then apply that role to users within the organization.  A user's effective rights are governed by the union of all the permissions and scope of the primary role with all additional roles.  A user's primary role must be one of the built-in fixed roles, it cannot be a custom role.
 
 **Important:** When an organization is deleted, any custom roles that were defined within that organization are also deleted.
 
 #### Creating a custom role
-The *Administration* -> *Roles* page lists system roles and any custom roles that have been created in the organization.  To add a custom role, click the *Add custom role* button at the upper-right corner of the page.  On the *Add custom role* page, enter the name for the new role in the text box, and an optional description, and then select the desired permissions to assign to the role.  Permissions are named in the format *Feature:Operation* and are grouped according to the system role that they are assigned by default.
+The *Administration* -> *Roles* page lists system roles and any custom roles that have been created in the organization.  To add a custom role, click the *Add custom role* button at the upper-right corner of the page.  On the *Add custom role* page, enter the name for the new role in the text box, and an optional description, and then select the desired permissions to assign to the role.  Permissions are named in the format *Feature: Operation* and are grouped according to the system role that they are assigned by default.
 
 ![add custom role page](add_custom_role-en.png)
 
@@ -84,7 +84,7 @@ Environment roles are assigned to a user when adding members to an environment:
 1. Navigate to the desired service.
 1. Click on the three-dot menu to the right of the desired environment.
 1. Select *Manage members*.
-1. In the following page enter a name in the text box labeled *Add member to environment*.
+1. In the following page, enter the name of the user to add in the text box labeled *Add member to environment*.
 
 ![edit environment members page](list_of_env_roles-en.png)
 
