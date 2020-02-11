@@ -64,7 +64,7 @@ Tous les rôles système et rôles personnalisés dans l'organisation sont énum
 ![add custom role page](add_custom_role-en.png)
 
 ## Les rôles d'environnement
-Pour contrôler l'accès aux ressources dans une environnement, CloudMC conçoit le *rôle d'environnement*.  En ajouter un membre nouveau à une environnement, il faut assigner un rôle d'environnment à l'utilisateur, qui régit le niveau d'accès accordé à l'utilisateur à l'intérieur de l'environnement.  La plupart des modules d'extension sont livrés avec le rôles d'environnment standards celles-ci :
+Pour contrôler l'accès aux ressources dans un environnement, CloudMC conçoit le *rôle d'environnement*.  En ajouter un membre nouveau à un environnement, il faut assigner un rôle d'environnment à l'utilisateur, qui régit le niveau d'accès accordé à l'utilisateur à l'intérieur de l'environnement.  La plupart des modules d'extension sont livrés avec le rôles d'environnment standards celles-ci :
 
 - **Observateur :**  Accès en lecture seule à l'environnement.
 - **Éditeur :**  Peut modifier toutes les charactéristiques de l'environnement.  Pas capable ni de changer les paramètres de l'evironnment ni de gérer les utilisateurs.
@@ -80,7 +80,7 @@ Les rôles additionels sont assignés à l'utilisateur en aller à la page *Modi
 
 ![additional roles page](additional_roles-en.png)
 
-Les rôles d'environnment sont assignés à l'utilisateur lorsque ajouter des membres à une environnement :
+Les rôles d'environnment sont assignés à l'utilisateur lorsque ajouter des membres à un environnement :
 1. Naviguer au service souhaité.
 1. Cliquer en le menu de trois points à la droite de l'environnement souhaitée.
 1. Sélectionner *Gérer le membres*.

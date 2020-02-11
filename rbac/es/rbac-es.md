@@ -56,7 +56,7 @@ Como india el diagrama abajo, subiendo por la jerarquía cada rol tiene todos lo
 
 CloudMC permite los usuarios con el rol de *Administrador* o mayor (o los usuarios con un rol personalizado que incluye el permiso *Roles: Gestionar*, explicado abajo en esta sección) a crear nuevos roles con permisos que están alineados con las necesidades commerciales específicas para la empresa.  El administrador selecciona los permisos individuals y guarde el rol, y luego lo aplica a los usuarios dentro de la organización.  Los derechos efectivos están regidos por la unión del entero de permisos y alcances del rol primario con los de todos otros roles asignados.  El rol primario de un usuaiaro tiene que ser uno de los roles fijados incorporados en CloudMC, jamás un rol personalizado.
 
-**Aviso:**  Al momento de eliminar una organización, todos los roles personalizados definidos adentro de tal organización son borrados al mismo tiempo.
+**Aviso:**  Al momento de eliminar una organización, todos los roles personalizados definidos adentro de tal organización se borran al mismo tiempo.
 
 #### Crear un rol personalizado
 La página *Administración* -> *Roles* enumera los roles de sistema y todos roles personalizados que se crearon en la organización.  Para añadir un rol personalizado, hacer clic en el botón *Agregar un rol personalizado*, ubicado en la superior-derecha de la página.  En la página *Agregar un rol personalizado*, rellenar el cuarto de texto con el nobmre para el nuevo rol, con una descripción opcional, y entonces seleccionar los permisos deseados para asignar al rol.  Los nombres de los permisos están escritos en el formato *Característica: Operación* y están agrupados en confirmidad con el rol de sistema a cuál el permiso está asignado por defecto.
