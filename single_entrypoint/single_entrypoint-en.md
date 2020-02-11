@@ -1,7 +1,7 @@
-# Administrator guide:  Presenting CloudMC Services and URLs
+# Administration guide:  Presenting CloudMC Services and URLs
 
 When planning a deployment of CloudMC, it is important to decide how the CloudMC Web user interface and API will be presented to end-users.  Will there be a single URL for all organizations, or will each organization be accessed via a custom URL unique to that organization?  CloudMC provides the cloud operator with both of these options.
-- Single-entrypoint: All services are exposed via a common domain name. The login page is accessed using the same URL for all organizations.  This is the default behaviour
+- Single-entrypoint: The portal is exposed via a common domain name. The login page is accessed using the same URL for all organizations.  This is the default behaviour
 - Multi-entrypoint: Each organization receives a unique domain name.  The login page is accessed via a URL with that name
 
 
@@ -15,7 +15,7 @@ Under this model, it is recommended that the following system properties be conf
 
 The above two properties control whether end-users can log in with a username, an email address, or both.  Though it is not required that usernames be disabled and email addresses required, in practice it is easier for end-users to identify themselves with their email address, which is normally a unique attribute and is unlikely to be forgotten.
 
-With single-entrypoint enabled, accounts must be local.  Organizations cannot have LDAP login configured, because the organization the end-user belongs to is not known until the user is authenticated.  User accounts are created within each organization, but each account must have an email address that is unique across all organizations in the system (or username if login by username is enabled).
+With single-entrypoint enabled, user accounts are created within each organization, but each account must have an email address (or username, if login via username is enabled) that is unique across all organizations in the system.
 
 ### Multi-entrypoint
 CloudMC can be configured to provide logins for end-users via a URL that is unique for each organization.  When multi-entrypoint login is configured, each organization will be associated with an organization code.  The organization code is used as the subdomain for the URL, and the value of the *public.host* system property is appended to form the complete domain name for the URL.
@@ -30,8 +30,8 @@ Because organizations have unique URLs, each login page can be customized with a
 | Common URL for all organizations | Yes | No |
 | Each organization is accessed via a unique URL | No | Yes |
 | Custom logo on login page | No | Yes |
-| LDAP authentication | No | Yes |
-| URL based on the customer name | No | Yes |
+| LDAP authentication | Yes | Yes |
+| URL based on the customer code | No | Yes |
 | Role-based access control | Yes | Yes |
 | Trials can introduce lengthy and arbitrary domain names | No | Yes |
 | Duplicate email addresses (or usernames) allowed across organizations | No | Yes |
