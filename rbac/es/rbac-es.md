@@ -1,4 +1,4 @@
-# Guía administrativa: El control de acceso basado en roles
+# Guía de administración: El control de acceso basado en roles
 
 El control de acceso en CloudMC se alcanza a través un modelo flexible y multi-occupante, que provee una manera simplificada de gestionar los permisos por todas partes du una jerarquía de organizaciones y entornos.  La funcionalidad del control de acceso basado en roles que viene con CloudMC permite un control preciso de los permisos que son otorgados a los usuarios.
 

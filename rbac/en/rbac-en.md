@@ -1,4 +1,4 @@
-# Administrator guide: Role-based access controls
+# Administration guide: Role-based access controls
 
 Access control in CloudMC is achieved through a flexible, multi-tenant model that provides a simplified way to manage permissions across a hierarchy of organizations and environments.  Role-based access control (RBAC) features built into CloudMC allow fine-grained control over the permissions which are granted to users.
 
