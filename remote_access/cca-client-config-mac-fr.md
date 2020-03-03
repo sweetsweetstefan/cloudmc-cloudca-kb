@@ -15,7 +15,7 @@ Ce système d'exploitation offre une client IKEv2 natif. Voici les étapes pour 
 
 ### Créer la connexion VPN
 
-1. Ouvrir *Préfèrences Système > Réseau*
+1. Ouvrir *Préférences Système > Réseau*
 1. Cliquer sur le bouton **+** pour ajouter un VPN:
    - **Interface:** VPN
    - **Type de VPN:** IKEv2
