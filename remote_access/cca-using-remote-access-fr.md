@@ -1,9 +1,9 @@
 # Guide d'utilisation :  Emploi du VPN pour l'accès à distance
 
-cloud.ca vous offre la possibilité de vous connecter de façon sécurisée depuis votre maison ou votre bureau aux réseaux de vos VPCs.  Grâce à un client VPN basé sur IKEv2 et IPSec installé sur votre plateforme (Windows, Mac OSX, Ubuntu…), vous pourrez accéder à vos machines virtuelles sans utiliser la redirection de port sur adresses IP publiques.
+cloud.ca vous offre la possibilité de vous connecter de façon sécurisée depuis votre maison ou votre bureau aux réseaux de vos VPCs.  Grâce à un client VPN basé sur IKEv2 et IPSec installé sur votre plateforme (Windows, macOS, Ubuntu…), vous pourrez accéder à vos machines virtuelles sans utiliser la redirection de port sur adresses IP publiques.
 
 ## Configuration du VPC
-**Note :** Les opérations suivantes sont uniquement disponibles si votre compte utilisateur possède le rôle **Environment Admin** sur l'environnement cible.
+**Note :** Les opérations suivantes sont uniquement disponibles si votre compte utilisateur possède ou le rôle **Éditeur** ou **Propriétaire** sur l'environnement cible.
 
 #### Activation du VPN
 Avant de pouvoir vous connecter à votre VPC à travers une connexion VPN, vous devrez activer l'accès au VPN sur le VPC.

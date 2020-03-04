@@ -1,9 +1,9 @@
 # User Guide: Using the Remote Access VPN
 
-cloud.ca provides the ability to connect securely from your home or office to your VPC. Using an IKEv2-over-IPSec based VPN client on your preferred platform (e.g.: Windows, Mac OS X, Ubuntu...), you will be able to access your instances without having to go through port forwarding on public IP addresses.
+cloud.ca provides the ability to connect securely from your home or office to your VPC. Using an IKEv2-over-IPSec based VPN client on your preferred platform (e.g.: Windows, macOS, Ubuntu...), you will be able to access your instances without having to go through port forwarding on public IP addresses.
 
 ## VPC Configuration
-**Note:** To perform the following operations, your user account needs to be assigned the **Environment Admin** role on the target environment.
+**Note:** To perform the following operations, your user account needs to be assigned either the **Editor** or **Owner** role on the target environment.
 
 #### Enable VPN access
 Before you can connect to your VPC through a client VPN connection, you need to enable VPN access on the VPC.

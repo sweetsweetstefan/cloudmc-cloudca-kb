@@ -1,4 +1,4 @@
-# User Guide: VPN Client Configuration for Mac OS X
+# User Guide: VPN Client Configuration for macOS
 
 This operating system provides a native IKEv2 VPN client. Here are the steps to set up a VPN connection:
 

@@ -1,10 +1,10 @@
-# Guide d'utilisation :  Configuration du client de VPN pour Mac OS X
+# Guide d'utilisation :  Configuration du client de VPN pour macOS
 
 Ce système d'exploitation offre une client IKEv2 natif. Voici les étapes pour configurer une connexion VPN IKEv2 :
 
 #### Autoriser le certificat
 
-1. Faire un double-clic sur le certificat que vous avez téléchargé et enregistré sur votre ordinateur (par exemple: **cloudca-vpn.crt**) et ajouter-le dans votre trousseaux **session**.
+1. Faire un double-clic sur le certificat que vous avez téléchargé et enregistré sur votre ordinateur (par exemple: **cloudca-vpn.crt**) et ajouter-le dans votre trousseau **session**.
    ![Add Certificate](Mac-1-Add-Certificate.png)
 1. Ouvrir l'application *Trousseaux d’accès* : *Finder > Applications > Utilitaires > Trousseaux d’accès.app*
 1. Cliquer sur **session** à gauche et sur *Certificats* en bas à gauche.
