@@ -33,4 +33,4 @@ Ce système d'exploitation offre une client IKEv2 natif. Voici les étapes pour 
       ![Authenticate](Mac-5-Authentication.png)
 1. Cliquer sur *Appliquer*.
 1. Cochez l'option *Afficher l'état VPN dans la barre des menus* pour accéder à cette connexion VPN plus facilement
-1. Vous pouvez maintenant vous connecter au VPN depuis la barre de menu
+1. Vous pouvez maintenant vous connecter au VPN depuis la barre de menu.
