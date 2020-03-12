@@ -37,6 +37,7 @@ Through the use of tagging, scope for an assigned role can be automatically exte
 The fixed roles included with CloudMC are applicable to a broad range of use cases.  They can be assigned to a user's primary role, or as an additional role.
 
 A summary of each fixed role when applied as a primary role:
+
 - **Guest:** A read-only role.  Can view resources in assigned environments.
 - **User:** Can create new environments with existing service connections, and manage environments owned by the user.  Cannot see any existing environments until the user is added to them.
 - **Administrator:** Can manage the organization. Can manage all environments in all service connections.  Cannot view sub-organizations nor create new sub-organizations.

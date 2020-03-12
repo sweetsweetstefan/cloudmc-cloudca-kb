@@ -34,7 +34,7 @@ Cada uno de los roles de sistema tiene un *alcance*, que puede ser uno de los si
 Usando la funcionalidad de etiquetas, el alcance de un rol asignado puede crecer automaticamente cuando una organización está etiquetada, y se peuede reducir cuando la etiqueta se borra.  Esto permite escenarios donde el alcance del rol puede cambiarse en una manera dinámica basado en las reglas del negocio.
 
 ## Los roles fijos
-Los roles fijos incorporados en CloudMC son applicables a una amplia gama de casos de uso.  Ellos pueden se asignados al rol primario de un usuario, o como un rol addicional.
+Los roles fijos incorporados en CloudMC son applicables a una amplia gama de casos de uso.  Ellos pueden ser asignados al rol primario de un usuario, o como un rol addicional.
 
 Un sumario de cada rol fijo cuando aplicado como un rol primario:
 - **Invitado:**  Un rol de solo-lectura.  Puede ver los recursos en los entornos los cuales la cuenta es miembro.
@@ -48,7 +48,7 @@ Cada rol fijo tiene un alcance predeterminado:
 - Revendedor:  La organización dentro de que existe la cuenta usuaria, y todas sus sub-organizaciones.
 - Operador:  Todas las organizaciones.
 
-Como india el diagrama abajo, subiendo por la jerarquía cada rol tiene todos los privilegios que los precedents:
+Como indica el diagrama abajo, subiendo por la jerarquía cada rol tiene todos los privilegios que los precedents:
 
 ![permissions chart](permissions-en.png)
 
