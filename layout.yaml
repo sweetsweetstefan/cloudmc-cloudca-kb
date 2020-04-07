@@ -55,7 +55,7 @@ categories:
       - deploy-a-kubernetes-cluster-with-rancher-2-x.md
 - category: vpn
   articles:
-      - cca-using-remote-access-ikev2.md
+      - cca-using-remote-access.md
       - cca-client-config-mac.md
       - cca-client-config-windows.md
       - cca-client-config-ubuntu.md
