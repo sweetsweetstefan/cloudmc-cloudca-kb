@@ -1,0 +1,60 @@
+categories:
+- category: general
+  articles:
+      - cloud.ca-in-a-nutshell.md
+      - 10-noteworthy-improvements-in-the-new-cloud-ca-portal.md
+      - need-more-help.md
+- category: basic-concepts
+  articles:
+      - environments-to-organize-workloads-and-users.md
+      - main-cloud.ca-entities.md
+      - what-is-an-instance-template.md
+      - what-is-a-vpc.md
+      - system-roles.md
+      - what-is-object-storage.md
+- category: compute-service
+  articles:
+      - working-with-instances.md
+      - add-storage-to-instance.md
+      - working-with-ssh-keys.md
+      - configure-load-balancing.md
+      - configure-port-forwarding.md
+      - working-with-vpcs.md
+      - working-with-cloudstack-compute-apis.md
+      - working-with-snapshots-and-recovery-points.md
+      - working-with-instance-templates.md
+- category: object-storage-service
+  articles:
+      - object-storage-terminology.md
+      - use-s3-api-for-object-storage.md
+      - how-to-obtain-object-storage-api-credentials.md
+      - manage-my-objects-using-the-swift-command-line-client.md
+      - manage-my-objects-using-the-object-storage-api.md
+- category: reporting
+  articles:
+      - generate-a-usage-report.md
+      - dashboard.md
+- category: administration
+  articles:
+      - enable-two-factor-authentication.md
+      - single-entrypoint.md
+      - display-dates-in-your-preferred-time-zone.md
+      - restrict-user-access.md
+      - manage-users.md
+- category: how-to
+  articles:
+      - create-site-to-site-vpn-on-vpc.md
+      - install-and-config-cloudmonkey.md
+      - kernel-upgrade-on-ubuntu-debian.md
+      - force-reboot-an-instance.md
+- category: automation
+  articles:
+      - deploy-virtual-machine-using-terraform.md
+      - deploy-virtual-machine-using-cloudmonkey.md
+      - deploy-a-kubernetes-cluster-with-rancher-2-x.md
+- category: vpn
+  articles:
+      - cca-using-remote-access-ikev2.md
+      - cca-client-config-mac.md
+      - cca-client-config-windows.md
+      - cca-client-config-ubuntu.md
