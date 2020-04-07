@@ -18,16 +18,16 @@ In the VPC model, there might be a little more complexity related to management.
 
 A VPC is comprised of the following network components:
 
-- **VPC** − A VPC acts as a container for multiple isolated networks that can communicate with each other via a virtual router.
-- **Network Tiers** - Each tier acts as an isolated network with its own VLANs and CIDR list, where you can place groups of resources, such as VMs. Tiers are segmented by means of VLANs. The NIC of each tier acts as its gateway.
-- **Virtual Router** − A virtual router is automatically created and started when you create a VPC. The virtual router connects the tiers and directs traffic among the public gateway, VPN gateways, and NAT instances. For each tier, a corresponding NIC and IP exists in the virtual router. The virtual router provides DNS and DHCP services through its IP.
-- **Public Gateway** − Traffic to and from the Internet is routed to the VPC through a public gateway. In a VPC, the public gateway is not exposed to the end user; therefore, static routes are not supported for the public gateway.
-- **Private Gateway** − All traffic to and from a private network is routed to the VPC through the private gateway.
-- **VPN Gateway** − The VPC side of a VPN connection.
-- **Site-to-Site VPN Connection** − A hardware-based VPN connection between your VPC and the datacenter, home network, or co-location facility.
-- **Customer Gateway** − The customer side of a VPN Connection.
-- **NAT Instance** − An instance that provides Port-Address Translation for instances to access the Internet via the public gateway.
-- **Network ACL** − Ordered rules that determine whether traffic is allowed in or out of any tier associated with the network ACL
+- **VPC:** A VPC acts as a container for multiple isolated networks that can communicate with each other via a virtual router.
+- **Network Tiers:** Each tier acts as an isolated network with its own VLANs and CIDR list, where you can place groups of resources, such as VMs. Tiers are segmented by means of VLANs. The NIC of each tier acts as its gateway.
+- **Virtual Router:** A virtual router is automatically created and started when you create a VPC. The virtual router connects the tiers and directs traffic among the public gateway, VPN gateways, and NAT instances. For each tier, a corresponding NIC and IP exists in the virtual router. The virtual router provides DNS and DHCP services through its IP.
+- **Public Gateway:** Traffic to and from the Internet is routed to the VPC through a public gateway. In a VPC, the public gateway is not exposed to the end user; therefore, static routes are not supported for the public gateway.
+- **Private Gateway:** All traffic to and from a private network is routed to the VPC through the private gateway.
+- **VPN Gateway:** The VPC side of a VPN connection.
+- **Site-to-Site VPN Connection:** A hardware-based VPN connection between your VPC and the datacenter, home network, or co-location facility.
+- **Customer Gateway:** The customer side of a VPN Connection.
+- **NAT Instance:** An instance that provides Port-Address Translation for instances to access the Internet via the public gateway.
+- **Network ACL:** Ordered rules that determine whether traffic is allowed in or out of any tier associated with the network ACL
 
 ### Network architecture in a VPC
 In a VPC, the following network architectures are the basic options:

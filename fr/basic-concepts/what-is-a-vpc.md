@@ -18,16 +18,16 @@ Dans un modèle VPC, vous ferez face à une plus grande complexité de gestion. 
 ### Considérations réseaux d’un VPC
 Un VPC est composé des éléments suivants:
 
-- **VPC** - Un VPC contient un ou plusieurs réseaux isolés qui peuvent communiquer entre eux via un routeur virtuel.
-- **Tiers** - Chaque tier agit comme un réseau isolé avec son propre VLAN et son sous-réseau où l’on peut grouper logiquement les resources (ex. instances). Chaque tier est connecté au routeur virtuel qui agit comme passerelle vers les autres tiers.
-- **Routeur Virtuel** - Un router virtuel est automatiquement créé et démarré lors de la création d’un VPC. Le routeur virtuel inter-connecte les tiers et dirige le trafic vers la passerelle publique, les passerelles VPN et fait la translation d’adresses (NAT) pour les instances. Pour chaque tier, une interface correspondante et une adresse IP existe sur le routeur virtuel. Le routeur virtuel fournit les services DNS et DHCP grâce à cette IP.
-- **Passerelle publique** - Le trafic à destination et provenant de l’Internet est aiguillé dans le VPC à travers la passerelle publique. Dans un VPC, la passerelle publique n’est pas exposée à l’utilisateur, donc impossible d’ajouter ou modifier les routes.
-- **Passerelle Privée** - Tout trafic qui provient ou se dirige vers un réseau privé est aiguillé vers le VPC à travers la passerelle privée.
-- **Passerelle VPN** - L’interface du VPC lors d’une connection VPN.
-- **VPN Site-à-Site** - Une connection VPN vers un centre de donnée et votre VPC.
-- **Passerelle client** - Le côté du client lors d’une connection VPN.
-- **Traduction d'adresse réseau**  - Traduction d'adresse réseau (NAT) pour les instances afin de donner accès à l’Internet via la passerelle publique.
-- **ACL Réseau** - Règles ordonnées qui déterminent si le trafic sera permis en entrée ou en sortie de chacun des tiers associés à la règle ACL.
+- **VPC :** Un VPC contient un ou plusieurs réseaux isolés qui peuvent communiquer entre eux via un routeur virtuel.
+- **Tiers :** Chaque tier agit comme un réseau isolé avec son propre VLAN et son sous-réseau où l’on peut grouper logiquement les resources (ex. instances). Chaque tier est connecté au routeur virtuel qui agit comme passerelle vers les autres tiers.
+- **Routeur Virtuel :** Un router virtuel est automatiquement créé et démarré lors de la création d’un VPC. Le routeur virtuel inter-connecte les tiers et dirige le trafic vers la passerelle publique, les passerelles VPN et fait la translation d’adresses (NAT) pour les instances. Pour chaque tier, une interface correspondante et une adresse IP existe sur le routeur virtuel. Le routeur virtuel fournit les services DNS et DHCP grâce à cette IP.
+- **Passerelle publique :** Le trafic à destination et provenant de l’Internet est aiguillé dans le VPC à travers la passerelle publique. Dans un VPC, la passerelle publique n’est pas exposée à l’utilisateur, donc impossible d’ajouter ou modifier les routes.
+- **Passerelle Privée :** Tout trafic qui provient ou se dirige vers un réseau privé est aiguillé vers le VPC à travers la passerelle privée.
+- **Passerelle VPN :** L’interface du VPC lors d’une connection VPN.
+- **VPN Site-à-Site :** Une connection VPN vers un centre de donnée et votre VPC.
+- **Passerelle client :** Le côté du client lors d’une connection VPN.
+- **Traduction d'adresse réseau :** Traduction d'adresse réseau (NAT) pour les instances afin de donner accès à l’Internet via la passerelle publique.
+- **ACL Réseau :** Règles ordonnées qui déterminent si le trafic sera permis en entrée ou en sortie de chacun des tiers associés à la règle ACL.
 
 ### Architecture réseau dans un VPC
 Dans un VPC, les types d’architectures suivantes sont disponibles:
