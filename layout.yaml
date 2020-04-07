@@ -30,6 +30,7 @@ categories:
       - how-to-obtain-object-storage-api-credentials.md
       - manage-my-objects-using-the-swift-command-line-client.md
       - manage-my-objects-using-the-object-storage-api.md
+      - manage-my-objects-using-the-self-service-portal.md
 - category: reporting
   articles:
       - generate-a-usage-report.md
