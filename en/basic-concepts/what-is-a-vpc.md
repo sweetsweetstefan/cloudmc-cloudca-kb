@@ -18,7 +18,7 @@ In the VPC model, there might be a little more complexity related to management.
 
 A VPC is comprised of the following network components:
 
-- **VPC:** A VPC acts as a container for multiple isolated networks that can communicate with each other via a virtual router.
+- **VPC** A VPC acts as a container for multiple isolated networks that can communicate with each other via a virtual router.
 - **Network Tiers:** Each tier acts as an isolated network with its own VLANs and CIDR list, where you can place groups of resources, such as VMs. Tiers are segmented by means of VLANs. The NIC of each tier acts as its gateway.
 - **Virtual Router:** A virtual router is automatically created and started when you create a VPC. The virtual router connects the tiers and directs traffic among the public gateway, VPN gateways, and NAT instances. For each tier, a corresponding NIC and IP exists in the virtual router. The virtual router provides DNS and DHCP services through its IP.
 - **Public Gateway:** Traffic to and from the Internet is routed to the VPC through a public gateway. In a VPC, the public gateway is not exposed to the end user; therefore, static routes are not supported for the public gateway.

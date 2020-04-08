@@ -7,7 +7,7 @@ slug: cloud-ca-in-a-nutshell
 
 cloud.ca is a regional virtual private cloud platform. It delivers scalable, secure, high-performance, cost-effective, and resilient cloud services.
 
-- **Regional:** Intended to be exclusively hosted in Canadian datacenters; serves Canadian markets
+- **Regional** - Intended to be exclusively hosted in Canadian datacenters; serves Canadian markets
 - **Virtual private cloud** − An isolated environment within a bigger multi-tenant cloud
 - **Scalable** − Grow as you require
 - **Secure** − Tier-3 designed datacenters
