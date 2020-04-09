@@ -31,18 +31,18 @@ The following instructions apply to Microsoft Windows 10 using its native VPN cl
 
 
 #### Create network VPN connection
-![](/assets/Win-4-Settings.png)
+![Settings](/assets/Win-4-Settings.png)
 
-![](/assets/Win-5-VPN.png)
+![VPN Configuration](/assets/Win-5-VPN.png)
 
-![](/assets/Win-6-Add-Connection.png)
+![Add Connection](/assets/Win-6-Add-Connection.png)
 
-![](/assets/Win-7-Connection-Details.png)
+![Connection Details](/assets/Win-7-Connection-Details.png)
 
-![](/assets/Win-8-Select-Connection.png)
+![Select Connection](/assets/Win-8-Select-Connection.png)
 
 
 #### Initiate VPN connection
-![](/assets/Win-9-Connect.png)
+![Connect](/assets/Win-9-Connect.png)
 
-![](/assets/Win-10-Connected.png)
+![Connected](/assets/Win-10-Connected.png)

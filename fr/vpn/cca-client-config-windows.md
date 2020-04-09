@@ -31,18 +31,18 @@ Ces instructions permettent de configurer le VPN d'accès distant avec le client
 
 
 #### Créer la connexion VPN:
-[](/assets/Win-4-Settings.png)
+[Paramètres](/assets/Win-4-Settings.png)
 
-![](/assets/Win-5-VPN.png)
+![VPN](/assets/Win-5-VPN.png)
 
-![](/assets/Win-6-Add-Connection.png)
+![Ajouter connexion](/assets/Win-6-Add-Connection.png)
 
-![](/assets/Win-7-Connection-Details.png)
+![Détails sur la connexion](/assets/Win-7-Connection-Details.png)
 
-![](/assets/Win-8-Select-Connection.png)
+![Sélectionner la connexion](/assets/Win-8-Select-Connection.png)
 
 
 #### Initialiser la connexion VPN:
-![](/assets/Win-9-Connect.png)
+![Se connecter](/assets/Win-9-Connect.png)
 
-![](/assets/Win-10-Connected.png)
+![Connectée](/assets/Win-10-Connected.png)
