@@ -3,7 +3,7 @@ The following use cases illustrate the flexibility of CloudMC roles with real-wo
 
 The diagram below depicts three hypothetical organizations with environments and a sub-organization.  Note that Organization A has two tags, **billable** and **managed**, and Sub-organization C has one tag, **billable**.  Organization D is an approved trial, automatically tagged with **trial**.
 
-![use cases diagram](use-cases-trial-en.png)
+![use cases diagram](../../assets/rbac-use-cases-trial-en.png)
 
 | Scenario | Suggested role name | Role configuration | Notes from example |
 | --- | --- | --- | --- |

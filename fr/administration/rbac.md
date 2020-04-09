@@ -17,7 +17,7 @@ Le contrôle d'accès dans CloudMC est obtenu par un modèle flexible et multi-t
 
 - **Rôle d'environnement :**  Une collection de permissions d'environnement qui s'applique aux membres d'un environnement.
 
-![user access control chart](roles_chart-en.png)
+![user access control chart](../../assets/rbac-roles_chart-en.png)
 
 ## Les rôles système
 
@@ -50,7 +50,7 @@ Chaque rôle fixe a une portée par défaut :
 
 Comme l'illustre le diagramme ci-dessous, en montant dans le hiérarchie, chaque rôle reçoit toutes les privilèges de ceux qui précèdent :
 
-![permissions chart](permissions-en.png)
+![permissions chart](../../assets/rbac-permissions-en.png)
 
 ### Les rôles personnalisés
 
@@ -61,7 +61,7 @@ CloudMC permet que les utilisateurs avec le rôle *Administrateur* et plus élev
 #### Créer un rôle personnalisé
 Tous les rôles système et rôles personnalisés dans l'organisation sont énumérés à la page *Administration -> Rôles*.  Pour ajouter un rôle personnalisé, cliquer sur le bouton *Créer un rôle personnalisé* en haut à droit de la page.  Dans la page *Créer un rôle personnalisé*, saiser le nom pour le nouveau rôle dans le champ saisie, et une description facultative, et puis sélectionner les permissions souhaitées pour assigner au nouveau rôle.  Les permissions sont nommés avec le format *Charactéristique : Opération* et sont groupées selon le rôle système dont elles sont assignées par défaut.
 
-![add custom role page](add_custom_role-en.png)
+![add custom role page](../../assets/rbac-add_custom_role-en.png)
 
 ## Les rôles d'environnement
 Pour contrôler l'accès aux ressources dans un environnement, CloudMC conçoit le *rôle d'environnement*.  En ajouter un membre nouveau à un environnement, il faut assigner un rôle d'environnment à l'utilisateur, qui régit le niveau d'accès accordé à l'utilisateur à l'intérieur de l'environnement.  La plupart des modules d'extension sont livrés avec le rôles d'environnment standards celles-ci :
@@ -74,11 +74,11 @@ Pour contrôler l'accès aux ressources dans un environnement, CloudMC conçoit 
 
 Les rôles primaires sont assignés à l'utilisateur de la page *Modifier l'utilisateur*.
 
-![edit user page, primary role](select_primary_role-en.png)
+![edit user page, primary role](../../assets/rbac-select_primary_role-en.png)
 
 Les rôles additionels sont assignés à l'utilisateur en aller à la page *Modifier l'utilisateur* et cliquer sur *Rôles additionels* dans l'encadré.
 
-![additional roles page](additional_roles-en.png)
+![additional roles page](../../assets/rbac-additional_roles-en.png)
 
 Les rôles d'environnment sont assignés à l'utilisateur lorsque ajouter des membres à un environnement :
 1. Naviguer au service souhaité.
@@ -86,9 +86,9 @@ Les rôles d'environnment sont assignés à l'utilisateur lorsque ajouter des me
 1. Sélectionner *Gérer le membres*.
 1. Dans la page suivant, saisir le nom de l'utilisateur à ajouter dans le champ saisie marqué *Ajouter un membre à l'environnement*.
 
-![edit environment members page](list_of_env_roles-en.png)
+![edit environment members page](../../assets/rbac-list_of_env_roles-en.png)
 
 ---
-[Cas pratiques - Basiques](use-cases-basic-fr.md)
+[Cas pratiques - Basiques](rbac-use-cases-basic.md)
 
-[Cas pratiques - Avancés](use-cases-advanced-fr.md)
+[Cas pratiques - Avancés](rbac-use-cases-advanced.md)
