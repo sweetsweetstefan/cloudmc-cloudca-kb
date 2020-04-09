@@ -1,4 +1,8 @@
-# Guide d'administration :  Contrôle d'accès à base de rôles
+---
+title: "Contrôle d'accès à base de rôles"
+slug: controle-d-accès-a-base-de-roles
+---
+
 
 Le contrôle d'accès dans CloudMC est obtenu par un modèle flexible et multi-tenancier que fournit une manière simple pour gérer les permissions à tous les niveaux d'une hiérarchie d'organisations et d'environnements.  La fonctionnalité du contrôle d'accès à base de rôles de CloudMC permet un niveaux de contrôle précis sur les permissions qui sont accordées aux utilisateurs.
 

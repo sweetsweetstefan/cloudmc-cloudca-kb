@@ -1,10 +1,13 @@
-# Cas pratiques : Avancé
+---
+title: "Contrôle d'accès à base de rôles - Cas pratiques avancés"
+slug: controle-d-accès-a-base-de-roles-cas-pratiques-avances
+---
 
 Les cas suivants illustre la flexibilité des rôles en CloudMC avec des exmples du monde réel.  Sauf mention contraire, les exemples font la supposition que le compte utilisateur a un rôle primare de *Invité*, sans rôle additionnel, l'accès *Obsérvateur* pour une environnement dans l'organisation, et que le compte est crée dans l'organisation prévu pour être accédé.  Ceci sont des exemples seulement, les besoins varient d'individuel.
 
 Le diagramme ci-dessous dépeint trois organisations hypothétiques avec des environnements et une sous-organisation.  Prendre note qu'Organisation A a deux étiquettes, **billable** et **managed**, et Sub-organisation C a une étiquette, **billable**.
 
-![use cases diagram](use_cases-en.png)
+![use cases diagram](../../assets/rbac-use_cases-en.png)
 
 | Scénario | Nom de rôle suggéré | Configuration du rôle | Notes de l'exemple |
 | --- | --- | --- | --- |

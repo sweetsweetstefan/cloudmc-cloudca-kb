@@ -1,4 +1,8 @@
-# Guía de administración: El control de acceso basado en roles
+---
+title: "El control de acceso basado en roles"
+slug: el-control-de-acceso-basado-en-roles
+---
+
 
 El control de acceso en CloudMC se alcanza a través un modelo flexible y multi-occupante, que provee una manera simplificada de gestionar los permisos por todas partes du una jerarquía de organizaciones y entornos.  La funcionalidad del control de acceso basado en roles que viene con CloudMC permite un control preciso de los permisos que son otorgados a los usuarios.
 
@@ -17,7 +21,7 @@ El control de acceso en CloudMC se alcanza a través un modelo flexible y multi-
 
 - **Rol entornal:** Una colección compuesta de permisos entornales, que está asignada a los miembros de un entorno.
 
-![user access control chart](roles_chart-es.png)
+![user access control chart](../../assets/rbac-roles_chart-en.png)
 
 ## Los roles de sistema
 La función del rol de sistema es a controlar el acceso a la funcionalidad de CloudMC en una manera sencilla y estandardizada.  Un rol de sistema puede ser asignado a usuarios dentro de una organización, además que permitir la colaboración a travès de las organizaciónes.  Los roles de sistema se aplican en la interfaz Web así como en el API de CloudMC.  Los roles personalizados pueden ser definidos con permisos que son alineados con las reglas del negocio.
@@ -50,7 +54,7 @@ Cada rol fijo tiene un alcance predeterminado:
 
 Como indica el diagrama abajo, subiendo por la jerarquía cada rol tiene todos los privilegios que los precedents:
 
-![permissions chart](permissions-en.png)
+![permissions chart](../../assets/rbac-permissions-en.png)
 
 ### Los roles personalizados
 
@@ -61,7 +65,7 @@ CloudMC permite los usuarios con el rol de *Administrador* o mayor (o los usuari
 #### Crear un rol personalizado
 La página *Administración* -> *Roles* enumera los roles de sistema y todos roles personalizados que se crearon en la organización.  Para añadir un rol personalizado, hacer clic en el botón *Agregar un rol personalizado*, ubicado en la superior-derecha de la página.  En la página *Agregar un rol personalizado*, rellenar el cuarto de texto con el nobmre para el nuevo rol, con una descripción opcional, y entonces seleccionar los permisos deseados para asignar al rol.  Los nombres de los permisos están escritos en el formato *Característica: Operación* y están agrupados en confirmidad con el rol de sistema a cuál el permiso está asignado por defecto.
 
-![add custom role page](add_custom_role-en.png)
+![add custom role page](../../assets/rbac-add_custom_role-en.png)
 
 ## Los roles entornales
 Para controlar el acceso a los recursos dentro de un entorno, CloudMC introduce el cocepto del *rol entornal*.  Al añadir un miembro nuevo an un entorno, hay que asignarle al usuario un rol entornal, que gobierna el nivel de acceso concedido al usuario adentro del entorno.  La mayoría de complementos proveen los siguientes roles entornales estándares:
@@ -74,11 +78,11 @@ Para controlar el acceso a los recursos dentro de un entorno, CloudMC introduce 
 
 Roles primarios se asignan a usuarios en la página *Editar usuario*.
 
-![edit user page, primary role](select_primary_role-en.png)
+![edit user page, primary role](../../assets/rbac-select_primary_role-en.png)
 
 Se pueden asignar roles addicionales a un usuario en irse a la página *Editar usuario* y hacer clic en *Roles adicionales* en la barra lateral.
 
-![additional roles page](additional_roles-en.png)
+![additional roles page](../../assets/rbac-additional_roles-en.png)
 
 Los roles entornales se asignan a un usuario al añadir un miembro a un entorno:
 1. Navegar al servicio deseado.
@@ -86,9 +90,9 @@ Los roles entornales se asignan a un usuario al añadir un miembro a un entorno:
 1. Seleccionar *Administrar miembros*.
 1. En la página siguiente, rellenar con un nombre del usuario a añadir en el cuadro de texto marcado *Añadir miembro al entorno*.
 
-![edit environment members page](list_of_env_roles-en.png)
+![edit environment members page](../../assets/rbac-list_of_env_roles-en.png)
 
 ---
-[Casos prácticos - Básicos](use-cases-basic-es.md)
+[Casos prácticos - Básicos](rbac-use-cases-basic.md)
 
-[Casos prácticos - Avanzados](use-cases-advanced-es.md)
+[Casos prácticos - Avanzados](rbac-use-cases-advanced.md)

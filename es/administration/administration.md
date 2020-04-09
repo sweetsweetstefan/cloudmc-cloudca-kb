@@ -1,3 +1,3 @@
 ---
-name: Administration
+name: Administración
 ---

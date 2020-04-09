@@ -1,4 +1,9 @@
-# Use cases: Basic
+---
+title: "Role-based access controls - Basic use cases"
+slug: rbac-use-cases-basic
+---
+
+
 The following use cases illustrate the flexibility of CloudMC roles with real-world examples.  Unless otherwise indicated, the examples assume the user account has a primary role of *Guest*, no additional roles,  *Viewer* access on one environment in the organization, and that the account is created in the organization intended to be accessed.  These are examples only, individual needs will vary.
 
 The diagram below depicts three hypothetical organizations with environments and a sub-organization.  Note that Organization A has two tags, **billable** and **managed**, and Sub-organization C has one tag, **billable**.  Organization D is an approved trial, automatically tagged with **trial**.

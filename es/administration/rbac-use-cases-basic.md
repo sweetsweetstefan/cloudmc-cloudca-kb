@@ -1,9 +1,14 @@
-# Casos prácticos: Básicos
+---
+title: "El control de acceso basado en roles - Casos prácticos básicos"
+slug: el-control-de-acceso-basado-en-roles-casos-practicos-basicos
+---
+
+
 Los siguientes casos prácticos ilustran la flexibilidad de roles en CloudMC con ejemplos del mundo real.  A menos que se indique lo contrario, los ejemplos suponen que la cuenta usuario tiene un rol primario de *Invitado*, sin roles adicionales, el acceso *Espectador* para un entorno en la organización, y que la cuenta sea creada en la organización intendada a acceder.  Estos son solamente ejemplos, varian las necesidades individuales.
 
 El diagrama abajo representa tres organizaciónes hipotéticas con entornos y una sub-organización.  Tomar nota de que Organización A tiene dos etiquetas, **billable** y **managed**, y Sub-Organización C tiene una etiqueta, **billable**.  Organización D es una prueba aprobada, etiquetada automaticamente con **trial**.
 
-![use cases diagram](use-cases-trial-en.png)
+![use cases diagram](../../assets/rbac-use-cases-trial-en.png)
 
 | Escenario | Nombre de rol sugerido | Configuración del rol | Notas del ejemplo |
 | --- | --- | --- | --- |
